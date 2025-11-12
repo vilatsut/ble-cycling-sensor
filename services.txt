@@ -1,0 +1,153 @@
+Service: 00001816-0000-1000-8000-00805f9b34fb
+  Description: Cycling Speed and Cadence
+  Handle: 0x0021
+
+  Characteristic: 00002a55-0000-1000-8000-00805f9b34fb
+    Description: SC Control Point
+    Handle: 0x0027
+    Properties: write, indicate
+    Descriptor: 00002902-0000-1000-8000-00805f9b34fb
+      Handle: 0x0029
+      Value (hex): 0000
+
+  Characteristic: 00002a5b-0000-1000-8000-00805f9b34fb
+    Description: CSC Measurement
+    Handle: 0x0022
+    Properties: notify
+    Descriptor: 00002902-0000-1000-8000-00805f9b34fb
+      Handle: 0x0024
+      Value (hex): 0000
+
+  Characteristic: 00002a5c-0000-1000-8000-00805f9b34fb
+    Description: CSC Feature
+    Handle: 0x0025
+    Properties: read
+    Value (hex): 0100
+    Value (bytes): bytearray(b'\x01\x00')
+
+================================================================================
+
+Service: 0000180a-0000-1000-8000-00805f9b34fb
+  Description: Device Information
+  Handle: 0x0009
+
+  Characteristic: 00002a25-0000-1000-8000-00805f9b34fb
+    Description: Serial Number String
+    Handle: 0x000a
+    Properties: read
+    Value (hex): 3136353032313439333830353837
+    Value (bytes): bytearray(b'16502149380587')
+    Value (string): 16502149380587
+    Descriptor: 00002904-0000-1000-8000-00805f9b34fb
+      Handle: 0x000c
+      Value (hex): 19000000010000
+
+  Characteristic: 00002a29-0000-1000-8000-00805f9b34fb
+    Description: Manufacturer Name String
+    Handle: 0x000d
+    Properties: read
+    Value (hex): 506f6c617220456c656374726f204f79
+    Value (bytes): bytearray(b'Polar Electro Oy')
+    Value (string): Polar Electro Oy
+    Descriptor: 00002904-0000-1000-8000-00805f9b34fb
+      Handle: 0x000f
+      Value (hex): 19000000010000
+
+  Characteristic: 00002a28-0000-1000-8000-00805f9b34fb
+    Description: Software Revision String
+    Handle: 0x0016
+    Properties: read
+    Value (hex): 312e312e30
+    Value (bytes): bytearray(b'1.1.0')
+    Value (string): 1.1.0
+    Descriptor: 00002904-0000-1000-8000-00805f9b34fb
+      Handle: 0x0018
+      Value (hex): 19000000010000
+
+  Characteristic: 00002a24-0000-1000-8000-00805f9b34fb
+    Description: Model Number String
+    Handle: 0x0013
+    Properties: read
+    Value (hex): 53706565642053656e736f72
+    Value (bytes): bytearray(b'Speed Sensor')
+    Value (string): Speed Sensor
+    Descriptor: 00002904-0000-1000-8000-00805f9b34fb
+      Handle: 0x0015
+      Value (hex): 19000000010000
+
+  Characteristic: 00002a26-0000-1000-8000-00805f9b34fb
+    Description: Firmware Revision String
+    Handle: 0x0010
+    Properties: read
+    Value (hex): 30303431
+    Value (bytes): bytearray(b'0041')
+    Value (string): 0041
+    Descriptor: 00002904-0000-1000-8000-00805f9b34fb
+      Handle: 0x0012
+      Value (hex): 19000000010000
+
+  Characteristic: 00002a23-0000-1000-8000-00805f9b34fb
+    Description: System ID
+    Handle: 0x001c
+    Properties: read
+    Value (hex): 472fadfeff1a9ea0
+    Value (bytes): bytearray(b'G/\xad\xfe\xff\x1a\x9e\xa0')
+
+  Characteristic: 00002a27-0000-1000-8000-00805f9b34fb
+    Description: Hardware Revision String
+    Handle: 0x0019
+    Properties: read
+    Value (hex): 38393034373230332e3030
+    Value (bytes): bytearray(b'89047203.00')
+    Value (string): 89047203.00
+    Descriptor: 00002904-0000-1000-8000-00805f9b34fb
+      Handle: 0x001b
+      Value (hex): 19000000010000
+
+================================================================================
+
+Service: 00001801-0000-1000-8000-00805f9b34fb
+  Description: Generic Attribute Profile
+  Handle: 0x0008
+
+================================================================================
+
+Service: 00001800-0000-1000-8000-00805f9b34fb
+  Description: Generic Access Profile
+  Handle: 0x0001
+
+  Characteristic: 00002a00-0000-1000-8000-00805f9b34fb
+    Description: Device Name
+    Handle: 0x0002
+    Properties: read, write-without-response, write
+    Value (hex): 506f6c617220535044204144324634373239
+    Value (bytes): bytearray(b'Polar SPD AD2F4729')
+    Value (string): Polar SPD AD2F4729
+
+  Characteristic: 00002a01-0000-1000-8000-00805f9b34fb
+    Description: Appearance
+    Handle: 0x0004
+    Properties: read
+    Value (hex): 8204
+    Value (bytes): bytearray(b'\x82\x04')
+
+  Characteristic: 00002a04-0000-1000-8000-00805f9b34fb
+    Description: Peripheral Preferred Connection Parameters
+    Handle: 0x0006
+    Properties: read
+    Value (hex): fa00900101005802
+    Value (bytes): bytearray(b'\xfa\x00\x90\x01\x01\x00X\x02')
+
+================================================================================
+
+Service: 0000180f-0000-1000-8000-00805f9b34fb
+  Description: Battery Service
+  Handle: 0x001e
+
+  Characteristic: 00002a19-0000-1000-8000-00805f9b34fb
+    Description: Battery Level
+    Handle: 0x001f
+    Properties: read
+    Value (hex): 64
+    Value (bytes): bytearray(b'd')
+    Value (string): d
